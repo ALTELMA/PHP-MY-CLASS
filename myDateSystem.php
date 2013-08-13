@@ -13,7 +13,8 @@ class MyDateSystem{
 	
 	private $ThaiShortDate = array('มกราคม','กุมภาพันธ์','มีนาคม','เมษายน','พฤษภาคม','มิถุนายน','กรกฎาคม','สิงหาคม','กันยายน','ตุลาคม','พฤศจิกายน','ธันวาคม');
 	private $ThaiFullDate = array('ม.ค.','ก.พ.','มี.ค.','เม.ย.','พ.ค.','มิ.ย.','ก.ค.','ส.ค.','ก.ย.','ต.ค.','พ.ย.','ธ.ค.');
-				
+	
+
 	// Method to split date and seperate it.
 	public function splitDateTime($input){
 		
@@ -23,8 +24,8 @@ class MyDateSystem{
 		
 		// SETUP VARIABLE
 		// DATE
-		$this->day = strlen($splitDate[2]) < 2?str_replace('0', '', $splitDate[2]):$splitDate[2];
-		$this->month = strlen($splitDate[1]) < 2?str_replace('0', '', $splitDate[1]):$splitDate[1];
+		$this->day = (int)$splitDate[2];
+		$this->month = (int)$splitDate[1];
 		$this->year = $splitDate[0];
 		$this->th_year = $splitDate[0] + 543;
 		
