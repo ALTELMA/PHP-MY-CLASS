@@ -1,19 +1,19 @@
 <?php
 
-/*
+/**
  *
  * FileName : mydatesystem.php
  * Author : Phongthorn Kumkankaew
  * Create Date : 18/10/2555
- * Update Date : 21/10/2556
+ * Update Date : 30/5/2557
  * 
- * version : 0.0.2a
+ * version : 0.0.3
  * Description
  * - Add new method "normalDate" use to generate str date for international language
  * - Fixed to use string from @str_Month for system multi language
  *
  */
-
+ 
 class MyDateSystem{
 
 	private $day;
