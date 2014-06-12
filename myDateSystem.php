@@ -5,13 +5,18 @@
  * FileName : mydatesystem.php
  * Author : Phongthorn Kumkankaew
  * Create Date : 18/10/2555
- * Update Date : 30/5/2557
+ * Update Date : 12/6/2557
  * 
  * version : 0.0.3
  * Description
  * - Add new method "normalDate" use to generate str date for international language
  * - Fixed to use string from @str_Month for system multi language
  *
+ * version : 0.0.4
+ * Description
+ * - Fixed Method restoreDate
+ * - Fixed Method ThaiDate / NormalDate return Null when get input '0000-00-00'
+ * 
  */
  
 class MyDateSystem{
