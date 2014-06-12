@@ -112,10 +112,9 @@ class MyDateSystem{
 
 	// Method to change data to default format
 	public function restoreDate($delimiter, $input){
-
-		$dataSplit = explode($delimiter, $input);
-		$defaultFormat = $dataSplit[2].'/'.$dataSplit[1].'/'.$dataSplit[0];
-
+		
+		$defaultFormat = date('Y-m-d', strtotime(str_replace($delimiter,'-',$input)));
+		
 		return $defaultFormat;
 	}
 
