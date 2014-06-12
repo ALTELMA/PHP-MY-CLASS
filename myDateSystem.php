@@ -121,7 +121,7 @@ class MyDateSystem{
 	// Method to change data to thai format
 	public function thaiDate($input, $format = 1, $hasTime = FALSE){
 
-		if(!empty($input)){
+		if($input != '0000-00-00' && $input != '0000-00-01'){
 
 			$this->splitDateTime($input);
 
