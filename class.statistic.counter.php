@@ -2,7 +2,7 @@
 //==========================================================================================
 // Name : class.counter.statistic.php
 // Author : Phongthorn Kumkankaew
-// Coptright : @phongthorn kumkankaew 2012
+// Copyright : @phongthorn kumkankaew 2012
 // Date : 2012/01/09
 //==========================================================================================
 class Statistic_Counter{
