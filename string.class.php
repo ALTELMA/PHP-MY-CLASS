@@ -32,7 +32,7 @@ class String
         $strlen = strlen($str) - $strpos;
 
         if ($reverse) {
-
+            $count = 0;
             $curStrPos = ( $strpos - 1 );
 
             while ($count < $strlen) {
@@ -57,7 +57,7 @@ class String
             $value = implode('', $string_return_arr);
 
         } else {
-
+            $count = 0;
             $curStrPos = ( $strpos + strlen($key) );
 
             while ($count < $strlen) {
