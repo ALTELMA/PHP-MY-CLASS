@@ -21,7 +21,14 @@ class String
     {
         return preg_replace("/&#?[a-z0-9]+;/i","", $string);
     }
-
+    
+    /**
+     * [findNumericFromString description]
+     * @param  String $key keyword to get a position of start.
+     * @param  String $str content to find value.
+     * @param  boolean $reverse check for reverse.
+     * @return String
+     */
     private function findNumericFromString($key, $str, $reverse = false)
     {
         $string_temp_arr = array();
@@ -46,7 +53,7 @@ class String
                 $curStrPos--;
             }
 
-            $charCount = count($string_temp_arr);
+            $charCount = count($string_temp_arr) - 1;
 
             for ($i = $charCount; $i > 0; $i--) {
                 if ($string_temp_arr[$i] != ' ') {
@@ -63,20 +70,12 @@ class String
             while ($count < $strlen) {
                 $findChar = substr($str, $curStrPos, 1);
                 if (is_numeric($findChar) || $findChar == ' ') {
-                    $string_temp_arr[] = $findChar;
+                    $string_return_arr[] = $findChar;
                 } else {
                     break;
                 }
                 $count++;
                 $curStrPos++;
-            }
-
-            $charCount = count($string_temp_arr);
-
-            for ($i = 0; $i < $charCount; $i++) {
-                if ($string_temp_arr[$i] != ' ') {
-                    $string_return_arr[] = $string_temp_arr[$i];
-                }
             }
 
             $value = implode('', $string_return_arr);
